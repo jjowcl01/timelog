@@ -1,0 +1,26 @@
+<table class="table table-condensed">
+  <thead>
+    <th width="5%">ID</th>
+    <th width="26%">NAME</th>
+    <th width="28%">PROJECT</th>
+    <th width="18%">DATE</th>
+    <th width="15%">TIME</th>
+    <th width="13%"></th>
+  </thead>
+  <tbody class="pointable">
+    <tr ng-repeat="timelog in $ctrl.timelogs">
+         <td>{{timelog.id}}</td>
+      <td>{{timelog.name}}</td>
+      <td>{{timelog.project}}</td>
+       <td>{{timelog.date | date:'yyyy-MM-dd'}}</td>
+        <td>{{timelog.time | date: "HH:mm:ss"}}</td>
+         <td> <button ng-click="$ctrl.clickEdit(timelog)" class="btn btn-primary btn-sm">Edit</button></td>
+
+      <td><span 
+          class="glyphicon glyphicon-remove" 
+          ng-click="$ctrl.deleteTimelog(timelog)"
+          ng-class="{'hover-delete':delhovering}"
+          ></span></td>
+    </tr>
+  </tbody>
+</table>

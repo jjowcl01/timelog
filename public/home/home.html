@@ -1,0 +1,11 @@
+
+<h1>Time Log</h1>
+
+  
+<timelog-list-display timelog-data="$ctrl.timelogsInOrder"
+  select-timelog="$ctrl.editTimelog(timelog)"></timelog-list-display>
+
+<edit-timelog categories="$ctrl.categories"
+  edited-timelog="$ctrl.editedTimelog"
+  update-timelog="$ctrl.updateTimelog()"
+  create-new-timelog="$ctrl.createTimelog(timelogData)" ></edit-timelog>

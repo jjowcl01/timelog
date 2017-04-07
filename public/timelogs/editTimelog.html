@@ -1,0 +1,12 @@
+<form novalidate class="form-inline">
+   <input type="number" placeholder="ID" ng-model="$ctrl.id" class="form-control" min="100" required>
+  <input type="text" placeholder="DEVELOPER NAME" ng-model="$ctrl.name" class="form-control" required>
+  <input type="text" placeholder="SELECT A PROJECT" ng-model="$ctrl.project" class="form-control" required>
+  <input type="date" placeholder="yyyy-MM-dd" ng-model="$ctrl.date" class="form-control" required>   
+  <input type="time" placeholder="hh : mm : ss" ng-model="$ctrl.time" class="form-control" required>   
+  <button ng-show="!$ctrl.editing" class="btn btn-primary btn-sm" ng-click="$ctrl.create()">Add</button>
+  <button ng-show="$ctrl.editing" class="btn btn-primary btn-sm" ng-click="$ctrl.save()">Save</button>
+  <button ng-show="$ctrl.editing" class="btn btn-warning btn-sm" ng-click="$ctrl.cancel()">Cancel</button>
+</form>
+
+
